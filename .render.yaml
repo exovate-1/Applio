@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: applio
+    env: python
+    plan: free
+    buildCommand: pip install --prefer-binary -r requirements.txt
+    startCommand: python app.py  # Change to the correct start file
+    envVars:
+      - key: PORT
+        value: 7860
